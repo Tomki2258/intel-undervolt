@@ -1,4 +1,3 @@
-from cgitb import text
 import os
 import tkinter as tk
 from tkinter import Grid, messagebox
@@ -14,9 +13,9 @@ def program():
 
     entryList =[cpuVoltage,iGPUVoltage,cpuCacheVoltage]
     try:
-        for x in entryList:
-            value = int(x.get())
-            print(type(value))
+        #for x in entryList:
+            #value = int(x.get())
+            #print(type(value))
         
         lines[9] = "undervolt 0 'CPU' " +cpuCacheVoltage.get()+'\n'
         lines[10] = "undervolt 1 'GPU' "+iGPUVoltage.get()+'\n'
