@@ -24,6 +24,8 @@ def program():
         with open('/etc/intel-undervolt.conf','w',encoding = 'utf-8') as toWrite:
             toWrite.writelines(lines)
 
+
+        os.system('intel-undervolt apply')
         messagebox.showinfo(title='info',message='voltage applied')
     except:
         messagebox.showerror(title='ERROR',message='wrong or empty values')
